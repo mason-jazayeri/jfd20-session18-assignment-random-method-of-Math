@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A random 5-digit intiger or a number less than it</title>
+</head>
+
+<body>
+    <script>
+        // Introducing a random 5-digit intiger or a number less than it.
+        // (A number less than 100,000)
+        // There is a problem in this code snippet: The probability of coming 99,999 is zero.
+        random = Math.random();
+        random = random * 99999;
+        random = Math.floor(random);
+        console.log(random);
+    </script>
+</body>
+
+</html>

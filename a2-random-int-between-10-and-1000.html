@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A random intiger between 10 and 1,000 (excluding 10 and 1,000)</title>
+</head>
+
+<body>
+    <script>
+        // Introducing a random intiger between 10 and 1,000 (excluding 10 and 1,000)
+
+        // Method 1
+        // There is a problem in this code snippet: The probability of all outcomes are not the same.
+        random1 = Math.random();
+        random1 = random1 * 999;
+        random1 = Math.floor(random1);
+        if (random1 <= 10) {
+            random1 = random1 + 11;
+        }
+        console.log(random1);
+
+        // Method 2
+        function myRandom() {
+            random = Math.random();
+            random = random * 999;
+            return random = Math.floor(random);
+        }
+        var c = true;
+        for (var i = 0; c === true; i++) {
+            random2 = myRandom();
+            if (random2 > 10) {
+                c = false;
+            }
+        }
+        console.log(random2);
+
+        // Method 3
+        // Utelizing linear mapping formula to map [0,1] to [11,999]
+        random3 = Math.random();
+        random3 = random3 * (999 - 11) + 11;
+        random3 = Math.floor(random3);
+        console.log(random3);
+    </script>
+</body>
+
+</html>

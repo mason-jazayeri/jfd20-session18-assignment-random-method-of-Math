@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A random character</title>
+</head>
+
+<body>
+    <script>
+        // Indroducing a random character
+        random = Math.random();
+        random = random * (127 - 33) + 33;
+        random = Math.floor(random);
+        if (random === 127) {
+            random = random - 1;
+        }
+        var asciiCode = random;
+        asciiCharacter = String.fromCharCode(asciiCode);
+        console.log(asciiCharacter);
+    </script>
+</body>
+
+</html>
